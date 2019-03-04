@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,19 +9,22 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/javascript/game.js"></script>
-    
-
 
 </head>
-<body>
-    
+<body>    
     <h1>The Psychic Game</h1>
-    <p>Guess what letter I'm thinking of</p>
+    <br>
+    <h2>Guess what letter I'm thinking of</h2>
     <p>Wins:</p>
     <p>Losses:</p>
-    <p>Guesses Left:</p>
-    <span id=guesses>Your Guesses so far: 
-    </span>  
+    <p>Guesses Left: </p>
+    <p>Your guesses so far <span id="guessesSoFar"> </span></p>
+
+    <script type="text/javascript">
+    var guesses = document.getElementById("guessesSoFar").innerHTML = (event);
+
+    </script>
+   
     
     
 </body>
