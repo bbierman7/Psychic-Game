@@ -15,17 +15,20 @@
     <h1>The Psychic Game</h1>
     <br>
     <h2>Guess what letter I'm thinking of</h2>
-    <p>Wins:</p>
-    <p>Losses:</p>
-    <p>Guesses Left: </p>
-    <p>Your guesses so far <span id="guessesSoFar"> </span></p>
+    <br>
+    <p id="wins"></p>
+    <p id="losses"></p>
+    <p id="guessesLeft"></p>
+    <p id="userGuess"></p>
 
     <script type="text/javascript">
-    var guesses = document.getElementById("guessesSoFar").innerHTML = (event);
+          document.getElementById("wins").innerHTML = "Wins: " + wins;
+          document.getElementById("losses").innerHTML = "Losses: " + losses;
+          document.getElementById("guessesLeft").innerHTML = "Guesses left: " + guessesLeft;            
+          document.getElementById("userGuess").innerHTML = "Your guesses so far: " + function{userGuess};
 
     </script>
-   
-    
+      
     
 </body>
 </html>  
