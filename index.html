@@ -8,7 +8,6 @@
     <title>Psychic Game</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/javascript/game.js"></script>
 
 </head>
 <body>    
@@ -16,19 +15,13 @@
     <br>
     <h2>Guess what letter I'm thinking of</h2>
     <br>
-    <p id="wins"></p>
-    <p id="losses"></p>
-    <p id="guessesLeft"></p>
-    <p id="userGuess"></p>
+    <p>Wins:<span id="wins">0</span></p>
+    <p>Losses:<span id="losses">0</span></p>
+    <p>Guesses Left:<span id="guessesLeft">9</span></p>
+    <p>Your guesses so far:<span id="userGuess"></span></p>
 
-    <script type="text/javascript">
-          document.getElementById("wins").innerHTML = "Wins: " + wins;
-          document.getElementById("losses").innerHTML = "Losses: " + losses;
-          document.getElementById("guessesLeft").innerHTML = "Guesses left: " + guessesLeft;            
-          document.getElementById("userGuess").innerHTML = "Your guesses so far: " + function{userGuess};
-
-    </script>
-      
+ 
+    <script src="./assets/javascript/game.js"></script>
     
 </body>
 </html>  
