@@ -20,31 +20,34 @@ var randomLetter;
 document.addEventListener("keyup", function (event) {
   console.log(event.key);
 
+  document.getElementById("outcome").innerHTML = "";
 
-
-  //if user guess equals computer pick, add +1 to wins and reset 
+  //if user guess equals computer pick, add +1 to wins, say "You won!" and reset 
   if (randomLetter === event.key) {
     wins++;
     document.getElementById("wins").innerHTML = wins;
+    document.getElementById("outcome").innerHTML = "You won!";
     guessesLeft = 9;
-    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    document.getElementById("guesses-left").innerHTML = guessesLeft;
     randomLetter = alphabet[Math.floor((Math.random() * alphabet.length))]
     }    
-    //else subtract -1 from guessesLeft 
+    //else subtract -1 from guessesLeft and keep going
   else {
     if(guessesLeft > 0){
     guessesLeft--;
+    console.log(guessesLeft);
     userGuess.push(event.key);
     document.getElementById("guesses-left").innerHTML = guessesLeft;
     document.getElementById("user-guess").innerHTML = userGuess;
     }
+    //reset Game and say "You lost"
     else{
       guessesLeft = 9;
       randomLetter = alphabet[Math.floor((Math.random() * alphabet.length))];
       losses++;
       document.getElementById("losses").innerHTML = losses;
       userGuess = [];
-      document.inn
+      document.getElementById("outcome").innerHTML = "You lost";
     }
   }
 })
