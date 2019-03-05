@@ -20,16 +20,20 @@ function userGuess(event) {
   event.key;
 }
 
+//listen for user input with keystroke
 document.addEventListener("keyup", function (event) {
   console.log(event.key);
 
+  //if user guess equals computer pick, add +1 to wins and reset 
   if (randomLetter === event.key) {
     wins++;
     document.getElementById("wins").innerHTML = wins;
     guessesLeft = 9;
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
     randomLetter = alphabet[Math.floor((Math.random() * alphabet.length))]
-  } else {
+    }    
+    //else subtract -1 from guessesLeft 
+  else {
     if(guessesLeft=0){
     guessesLeft--;
     document.getElementById("guessesLeft").innerHTML = guessesLeft;
