@@ -2,10 +2,10 @@
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var userGuess = [,];
+var userGuess = [];
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var randomLetter;
-var userGet =
+// var userGet =
 
 
   //Functions:
@@ -15,14 +15,12 @@ var userGet =
     randomLetter = alphabet[Math.floor((Math.random() * alphabet.length))]
   }
 
-//User presses any key
-function userGuess(event) {
-  event.key;
-}
 
 //listen for user input with keystroke
 document.addEventListener("keyup", function (event) {
   console.log(event.key);
+
+
 
   //if user guess equals computer pick, add +1 to wins and reset 
   if (randomLetter === event.key) {
@@ -34,27 +32,37 @@ document.addEventListener("keyup", function (event) {
     }    
     //else subtract -1 from guessesLeft 
   else {
-    if(guessesLeft=0){
+    if(guessesLeft > 0){
     guessesLeft--;
-    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    userGuess.push(event.key);
+    document.getElementById("guesses-left").innerHTML = guessesLeft;
+    document.getElementById("user-guess").innerHTML = userGuess;
+    }
+    else{
+      guessesLeft = 9;
+      randomLetter = alphabet[Math.floor((Math.random() * alphabet.length))];
+      losses++;
+      document.getElementById("losses").innerHTML = losses;
+      userGuess = [];
+      document.inn
     }
   }
 })
 
-//Tells user how many guesses they have left
-function guessesLeft() {
-  var i;
-  for (i = 9; i <= guessesLeft; i--) {
+// //Tells user how many guesses they have left
+// function guessesLeft() {
+//   var i;
+//   for (i = 9; i <= guessesLeft; i--) {
 
-    if (userGuess === letters) {
-      wins++ , guessesLeft === 9 //add +1 to wins. Reset guessesLeft to 9
-    }
+//     if (userGuess === letters) {
+//       wins++ , guessesLeft === 9 //add +1 to wins. Reset guessesLeft to 9
+//     }
 
-    else {
-      losses++ , guessesLeft--
-    }
-  }
-}
+//     else {
+//       losses++ , guessesLeft--
+//     }
+//   }
+// }
 
           // document.getEklementById("wins").innerHTML = "You won! " + wins;
           // document.getElementById("losses").innerHTML = "Losses: " + losses;
