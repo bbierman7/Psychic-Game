@@ -1,3 +1,21 @@
-#background{
-    background-color: aqua;s
+body {
+    background: url('./assets/images/caleb-george-67724-unsplash.jpg');
+}
+
+
+.jumbotron{
+    border-radius: 50%;
+    
+}
+
+#user-guess{
+    padding-left: 5px;
+}
+
+#title{
+    margin-left:100px;
+}
+
+#subtitle{
+    margin-left:50px;
 }
