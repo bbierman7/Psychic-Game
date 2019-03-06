@@ -1,11 +1,11 @@
-body {
-    background: url('./assets/images/caleb-george-67724-unsplash.jpg');
+body{
+    /* background: url(.//images/caleb-george-67724-unsplash.jpg) */
+    background: url(../images/caleb-george-67724-unsplash.jpg)
 }
 
 
-.jumbotron{
-    border-radius: 50%;
-    
+#jumbotron{
+    border-radius: 500%;
 }
 
 #user-guess{
